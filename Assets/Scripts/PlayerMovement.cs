@@ -3,27 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(CharacterController))]
+[RequireComponent(typeof(Rigidbody))]
 public class PlayerMovement : MonoBehaviour
 {
     private ControlSceme _control;
     public float speed;
+    public float jumpHeight = 2;
+    private float gravityMuliplayer = 1f;
 
-    private float gravityMuliplayer;
-
-    private CharacterController _charControl;
-    private float _gravity = -9.81f;
-    private Vector3 velocity;
+    private Rigidbody _rb;
 
     void Start()
     {
-        _charControl = GetComponent<CharacterController>();
+        _rb = GetComponent<Rigidbody>();
         _control = new ControlSceme();
         _control.Player.Jump.performed += Jump_performed;
     }
 
     private void Jump_performed(InputAction.CallbackContext obj)
     {
+        float jumpforce = Mathf.Sqrt(jumpHeight * 2 * Physics.gravity.y);
+        _rb.AddForce(jumpforce * transform.up);
+
     }
 
     private void OnEnable()
@@ -40,9 +41,8 @@ public class PlayerMovement : MonoBehaviour
         Vector2 moveVal = _control.Player.Move.ReadValue<Vector2>();
         Vector3 move = transform.forward * moveVal.y + transform.right * moveVal.x;
         move *= speed;
-        move += transform.up * _gravity * gravityMuliplayer;
 
-        _charControl.Move(move * Time.deltaTime);
+        _rb.AddForce(move * Time.deltaTime);
     }
     public void ToggleGravity()
     {
