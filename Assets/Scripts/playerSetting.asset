@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c50da954b2892b446a9bb767f8d35ede, type: 3}
   m_Name: playerSetting
   m_EditorClassIdentifier: 
-  cameraSensitivity: 0
+  cameraSensitivity: 10
+  playerSpeed: 25
+  jumpHeight: 5

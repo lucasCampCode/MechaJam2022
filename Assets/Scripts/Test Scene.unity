@@ -800,9 +800,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f967d5971a76cf4fb5c39a8c4afbc7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  jumpHeight: 2
   cameraRoot: {fileID: 1753108830}
+  settings: {fileID: 11400000, guid: 0a36d8a481d28974c80d101e959d30cd, type: 2}
 --- !u!54 &1377005034
 Rigidbody:
   m_ObjectHideFlags: 0
