@@ -9,7 +9,7 @@ public class CameraSpringArm : MonoBehaviour
     public float springArmLength = 1f;
     private float trueLength = 0f;
 
-    void Update()
+    void FixedUpdate()
     {
         if (attachCamera)
         {
@@ -18,15 +18,5 @@ public class CameraSpringArm : MonoBehaviour
             transform.position = newPosition;
             transform.rotation = Quaternion.LookRotation(AttachPoint.forward, AttachPoint.up);
         }
-    }
-    private void FixedUpdate()
-    {
-        RaycastHit hit;
-        if (Physics.Raycast(AttachPoint.position, AttachPoint.forward * -1, out hit, springArmLength))
-        {
-            trueLength = hit.distance;
-        }
-        else
-            trueLength = springArmLength;
     }
 }
