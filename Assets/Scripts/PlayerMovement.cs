@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector3 move = transform.forward * moveInput.y + transform.right * moveInput.x;
         move *= settings.playerSpeed;
-        _rb.AddForce(move,ForceMode.Force);
+        _rb.AddForce(move * Time.deltaTime,ForceMode.VelocityChange);
     }
     public void MovePlayer(InputAction.CallbackContext ctx)
     {
