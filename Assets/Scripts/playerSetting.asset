@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraSensitivity: 10
   playerSpeed: 25
-  jumpHeight: 5
+  jumpHeight: 1

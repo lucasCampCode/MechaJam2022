@@ -11,6 +11,11 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody _rb;
     private float xRotation = 0f;
     private Vector2 moveInput;
+
+    //----ARTIST CODE----
+    public Animator playerCam;
+    //----ARTIST CODE----
+
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
@@ -19,7 +24,16 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector3 move = transform.forward * moveInput.y + transform.right * moveInput.x;
         move *= settings.playerSpeed;
-        _rb.AddForce(move * Time.deltaTime,ForceMode.VelocityChange);
+        _rb.AddForce(move,ForceMode.Force);
+        
+        //----ARTIST CODE----
+        if (move.magnitude > 0f)
+        {
+            playerCam.SetBool("IsWalking", true);
+        }
+        else { playerCam.SetBool("IsWalking", false); }
+        //----ARTIST CODE----
+
     }
     public void MovePlayer(InputAction.CallbackContext ctx)
     {
