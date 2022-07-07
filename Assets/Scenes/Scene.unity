@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 4562.362, g: 6404.752, b: 8611.41, a: 1}
+  m_IndirectSpecularColor: {r: 4562.362, g: 6404.756, b: 8611.402, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -834,81 +834,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1226963830731169725, guid: 74bcf4502a7f1344c84125f451981297,
-        type: 3}
-      propertyPath: antialiasing
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1226963830731169729, guid: 74bcf4502a7f1344c84125f451981297,
-        type: 3}
-      propertyPath: AttachPoint
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1226963830731169730, guid: 74bcf4502a7f1344c84125f451981297,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.58
-      objectReference: {fileID: 0}
-    - target: {fileID: 1226963830731169730, guid: 74bcf4502a7f1344c84125f451981297,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1226963830731169730, guid: 74bcf4502a7f1344c84125f451981297,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1226963830731169730, guid: 74bcf4502a7f1344c84125f451981297,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1226963830731169730, guid: 74bcf4502a7f1344c84125f451981297,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1226963830731169730, guid: 74bcf4502a7f1344c84125f451981297,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1226963830731169730, guid: 74bcf4502a7f1344c84125f451981297,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1226963830731169730, guid: 74bcf4502a7f1344c84125f451981297,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1226963830731169731, guid: 74bcf4502a7f1344c84125f451981297,
-        type: 3}
-      propertyPath: field of view
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 1226963830731169731, guid: 74bcf4502a7f1344c84125f451981297,
-        type: 3}
-      propertyPath: far clip plane
-      value: 100000
-      objectReference: {fileID: 0}
-    - target: {fileID: 8018880841233202161, guid: 74bcf4502a7f1344c84125f451981297,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 112
-      objectReference: {fileID: 0}
-    - target: {fileID: 8018880841233202162, guid: 74bcf4502a7f1344c84125f451981297,
-        type: 3}
-      propertyPath: playerCam
-      value: 
-      objectReference: {fileID: 1414878337}
-    - target: {fileID: 8018880841233202162, guid: 74bcf4502a7f1344c84125f451981297,
-        type: 3}
-      propertyPath: cameraRoot
-      value: 
-      objectReference: {fileID: 1327267359}
     - target: {fileID: 8018880841233202163, guid: 74bcf4502a7f1344c84125f451981297,
         type: 3}
       propertyPath: m_RootOrder
@@ -971,38 +896,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74bcf4502a7f1344c84125f451981297, type: 3}
---- !u!4 &1327267359 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1606244786444395814, guid: 74bcf4502a7f1344c84125f451981297,
-    type: 3}
-  m_PrefabInstance: {fileID: 1319227947}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1414878335 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1226963830731169726, guid: 74bcf4502a7f1344c84125f451981297,
-    type: 3}
-  m_PrefabInstance: {fileID: 1319227947}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1414878337
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1414878335}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: fd296c8872191574db3edac1e0246891, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1462813999
 GameObject:
   m_ObjectHideFlags: 0
