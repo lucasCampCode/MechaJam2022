@@ -347,7 +347,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8018880841233202175}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -431,8 +431,8 @@ MonoBehaviour:
   groundCheck: {fileID: 4064603959459525550}
   groundCheckRadius: 0.4
   _gravity: -9.81
-  jumpHeight: 2
-  cameraSensitivity: 30
+  jumpHeight: 1
+  cameraSensitivity: 10
   playerSpeed: 5
 --- !u!114 &8018880841233202160
 MonoBehaviour:
