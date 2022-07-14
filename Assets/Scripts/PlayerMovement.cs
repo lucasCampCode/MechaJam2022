@@ -17,16 +17,22 @@ public class PlayerMovement : MonoBehaviour
     [Header("Player Physics")]
     public float cameraSensitivity = 0f;
     public float playerSpeed = 0f;
+    [Tooltip("how much faster should the character move while Sprinting")]
+    public float speedMultiplier = 2f;
+    [Tooltip("how much faster should the character move while in air")]
+    public float InAirMultiplier = 0.5f;
 
     private CharacterController _controller;
     private float xRotation = 0f;
     private Vector2 moveInput;
     private Vector3 _velocity;
     private bool isGrounded;
-
+    private bool isSprinting;
+    public float Velocity{get { return _velocity.y; }}
     void Start()
     {
         _controller = GetComponent<CharacterController>();
+        Cursor.lockState = CursorLockMode.Locked;
     }
     private void FixedUpdate()
     {
@@ -36,7 +42,13 @@ public class PlayerMovement : MonoBehaviour
             _velocity.y = -2f;
         //move player based on player input
         Vector3 move = transform.forward * moveInput.y + transform.right * moveInput.x;
+        //speed multiplication
         move *= playerSpeed;
+        if (isSprinting)
+            move *= speedMultiplier;
+        if (!isGrounded)
+            move *= InAirMultiplier;
+
         _controller.Move(move * Time.deltaTime);
         //set animation walking perameter, based on if the player is moving
         playerCam.SetBool("IsWalking", move.magnitude > 0f);
@@ -66,8 +78,23 @@ public class PlayerMovement : MonoBehaviour
     {
         if (ctx.performed && isGrounded)
         {
-            //change gravity velocity when the player jumps
-            _velocity.y = Mathf.Sqrt(-2 * _gravity * jumpHeight);
+            JumpCall(jumpHeight);
+        }
+    }
+    public void JumpCall(float height)
+    {
+        //change gravity velocity when the player jumps
+        _velocity.y = Mathf.Sqrt(-2 * _gravity * height);
+    }
+    public void Sprint(InputAction.CallbackContext ctx)
+    {
+        if (ctx.performed)
+        {
+            isSprinting = true;
+        }
+        if (ctx.canceled)
+        {
+            isSprinting = false;
         }
     }
     private bool IsGrounded(Collider[] colliders)

@@ -13,7 +13,6 @@ public class CameraSpringArm : MonoBehaviour
     {
         if (attachCamera)
         {
-
             Vector3 newPosition = AttachPoint.position + AttachPoint.forward * -trueLength;
             transform.position = newPosition;
             transform.rotation = Quaternion.LookRotation(AttachPoint.forward, AttachPoint.up);
