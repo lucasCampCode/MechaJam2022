@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     [Tooltip("how much faster should the character move while Sprinting")]
     public float speedMultiplier = 2f;
     [Tooltip("how much faster should the character move while in air")]
-    public float InAirMultiplier = 0.5f;
+    public float InAirMultiplier = 0.9f;
 
     private CharacterController _controller;
     private float xRotation = 0f;
