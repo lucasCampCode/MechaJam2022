@@ -52,7 +52,7 @@ public class Anchor
         chained = true;
     }
 } 
-public class curve : MonoBehaviour
+public class PathCreator : MonoBehaviour
 {
     public Transform obj;
     public float pathCompleteTime = 30;
@@ -67,15 +67,15 @@ public class curve : MonoBehaviour
     public float speed = 5;
     public float currentDistance;
 
-    private int currentAnchorIndex;
-    public int CurrentAchor { get => currentAnchorIndex; set => currentAnchorIndex = value;  }
-    private float currentTimeInAnchor;
-    public float CurrentTime { get => currentTimeInAnchor; set => currentTimeInAnchor = value; }
-    private bool paused;
-    public bool IsPaused { get => paused;  }
-    private bool playing;
-    public bool IsPlaying { get => playing; }
-    private float timePerSegment;
+    private int _currentAnchorIndex;
+    public int CurrentAchor { get => _currentAnchorIndex; set => _currentAnchorIndex = value;  }
+    private float _currentTimeInAnchor;
+    public float CurrentTime { get => _currentTimeInAnchor; set => _currentTimeInAnchor = value; }
+    private bool _paused;
+    public bool IsPaused { get => _paused;  }
+    private bool _playing;
+    public bool IsPlaying { get => _playing; }
+    private float _timePerSegment;
 
 
     // Start is called before the first frame update
@@ -94,60 +94,60 @@ public class curve : MonoBehaviour
     public void PlayPath(float time)
     {
         if (time <= 0) time = 0.001f;
-        playing = true;
-        paused = false;
+        _playing = true;
+        _paused = false;
         StopAllCoroutines();
         StartCoroutine(FollowPath(useSpeed ? speed : time));
     }
     public void PausePath()
     {
-        paused = true;
-        playing = false;
+        _paused = true;
+        _playing = false;
     }
     public void ResumePath()
     {
-        if (paused)
-            playing = true;
-        paused = false;
+        if (_paused)
+            _playing = true;
+        _paused = false;
     }
     public void RefreshTransform()
     {
-        obj.position = GetBezierPosition(currentAnchorIndex, currentTimeInAnchor);
-        obj.rotation = GetLerpRotation(currentAnchorIndex, currentTimeInAnchor);
+        obj.position = GetBezierPosition(_currentAnchorIndex, _currentTimeInAnchor);
+        obj.rotation = GetLerpRotation(_currentAnchorIndex, _currentTimeInAnchor);
     }
     public void UpdateTimeInSeconds(float seconds)
     {
-        timePerSegment = seconds / ((looped) ? anchors.Count : anchors.Count - 1);
+        _timePerSegment = seconds / ((looped) ? anchors.Count : anchors.Count - 1);
     }
     IEnumerator FollowPath(float time)
     {
         UpdateTimeInSeconds(time);
-        currentAnchorIndex = 0;
-        while (currentAnchorIndex < anchors.Count)
+        _currentAnchorIndex = 0;
+        while (_currentAnchorIndex < anchors.Count)
         {
             if(useSpeed)
-                GetSamplePoints(currentAnchorIndex, sampleAmount);
-            currentTimeInAnchor = 0f;
+                GetSamplePoints(_currentAnchorIndex, sampleAmount);
+            _currentTimeInAnchor = 0f;
             currentDistance = 0f;
-            while (currentTimeInAnchor < 1)
+            while (_currentTimeInAnchor < 1)
             {
-                if (!paused)
+                if (!_paused)
                 {
                     currentDistance += Time.deltaTime * time;
-                    currentTimeInAnchor = useSpeed ? GetTime(anchors[currentAnchorIndex].LUT,currentDistance): GetTime(timePerSegment);
-                    obj.position = GetBezierPosition(currentAnchorIndex, currentTimeInAnchor);
-                    obj.rotation = GetLerpRotation(currentAnchorIndex, currentTimeInAnchor);
+                    _currentTimeInAnchor = useSpeed ? GetTime(anchors[_currentAnchorIndex].LUT,currentDistance): GetTime(_timePerSegment);
+                    obj.position = GetBezierPosition(_currentAnchorIndex, _currentTimeInAnchor);
+                    obj.rotation = GetLerpRotation(_currentAnchorIndex, _currentTimeInAnchor);
                 }
                 yield return 0;
             }
-            ++currentAnchorIndex;
-            if (currentAnchorIndex == anchors.Count - 1 && !looped) break;
-            if (currentAnchorIndex == anchors.Count && afterLoop == EAfterLoop.Continue) currentAnchorIndex = 0;
+            ++_currentAnchorIndex;
+            if (_currentAnchorIndex == anchors.Count - 1 && !looped) break;
+            if (_currentAnchorIndex == anchors.Count && afterLoop == EAfterLoop.Continue) _currentAnchorIndex = 0;
         }
     }
     float GetTime(float time)
     {
-        return currentTimeInAnchor + Time.deltaTime / time;
+        return _currentTimeInAnchor + Time.deltaTime / time;
     }
     float GetTime(float[] LUT,float distance)
     {
@@ -200,8 +200,8 @@ public class curve : MonoBehaviour
     public void StopPath()
     {
         StopAllCoroutines();
-        paused = false;
-        playing = false;
+        _paused = false;
+        _playing = false;
     }
     public void GetSamplePoints(int i, int numOfSamples)
     {

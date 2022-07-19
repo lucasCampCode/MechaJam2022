@@ -10,10 +10,10 @@ public enum EManipulationModes
 }
 
 
-[CustomEditor(typeof(curve))]
-public class CurveInspector : Editor
+[CustomEditor(typeof(PathCreator))]
+public class PathCreatorInspector : Editor
 {
-    private curve t;
+    private PathCreator t;
     private ReorderableList pointReorderableList;
 
     private float time;
@@ -65,7 +65,7 @@ public class CurveInspector : Editor
     {
         EditorApplication.update += Update;
 
-        t = (curve)target;
+        t = (PathCreator)target;
         if (t == null) return;
 
         SetupEditorVariables();
@@ -545,12 +545,12 @@ public class CurveInspector : Editor
         }
         GUI.enabled = true;
         GUILayout.EndHorizontal();
-
         GUILayout.BeginHorizontal();
-        useSpeedProperty.boolValue = GUILayout.Toggle(useSpeedProperty.boolValue, new GUIContent("Use Speed","if true it will use distance based calculation"), GUILayout.Width(Screen.width / 3f));
-        GUILayout.EndHorizontal();
-        GUILayout.BeginHorizontal();
-        sampleAmountProperty.intValue = EditorGUILayout.IntSlider(new GUIContent("Sample Amount ","how accucurate is the distance between Anchors,used during speed calculation, lower if experincing a framerate issue"),sampleAmountProperty.intValue, 2, 64);
+        useSpeedProperty.boolValue = GUILayout.Toggle(useSpeedProperty.boolValue, new GUIContent("Use Speed", "if true it will use distance based calculation"), GUILayout.Width(Screen.width / 3f));
+        GUI.enabled = useSpeedProperty.boolValue;
+        GUILayout.Label(new GUIContent("Sample Amount: ", "how accucurate is the distance between Anchors,increse for sharper curve calculation and remove jitterring"), GUILayout.Width(Screen.width / 4f));
+        sampleAmountProperty.intValue = EditorGUILayout.IntSlider(sampleAmountProperty.intValue, 64, 256);
+        GUI.enabled = true;
         GUILayout.EndHorizontal();
 
     }
