@@ -17,8 +17,15 @@ public class FollowPath : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Vector3 Targetposition = path.obj.position;
-        Vector3 move = Targetposition - transform.position;
-        _navAgent.Move(move);
+        Vector3 targetPosition = path.obj.position;
+        Vector3 move = targetPosition - transform.position;
+        transform.LookAt(new Vector3(targetPosition.x, transform.position.y, targetPosition.z));
+        if(move.magnitude > 5f)
+            _navAgent.Move(move.normalized * path.speed * Time.deltaTime);
+    }
+    public void GotoPoint(Vector3 point)
+    {
+        transform.LookAt(new Vector3(point.x, transform.position.y, point.z));
+        _navAgent.Move(Vector3.forward * path.speed * Time.deltaTime);
     }
 }

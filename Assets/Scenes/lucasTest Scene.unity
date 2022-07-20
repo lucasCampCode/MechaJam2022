@@ -124,7 +124,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 9c966c46569a2f046a6e719406e2c66e, type: 2}
 --- !u!1001 &1718889
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -140,17 +140,17 @@ PrefabInstance:
     - target: {fileID: 7072640378885632285, guid: f67fd77f397500c428638343c29c13db,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 464.92224
+      value: 455.09
       objectReference: {fileID: 0}
     - target: {fileID: 7072640378885632285, guid: f67fd77f397500c428638343c29c13db,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 136.03099
+      value: 140.99
       objectReference: {fileID: 0}
     - target: {fileID: 7072640378885632285, guid: f67fd77f397500c428638343c29c13db,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 711.62805
+      value: 717.1
       objectReference: {fileID: 0}
     - target: {fileID: 7072640378885632285, guid: f67fd77f397500c428638343c29c13db,
         type: 3}
@@ -1128,7 +1128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obj: {fileID: 772109467}
   pathCompleteTime: 30
-  looped: 1
+  looped: 0
   visual:
     pathColor: {r: 0, g: 1, b: 0, a: 1}
     inactivePathColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
@@ -1137,7 +1137,7 @@ MonoBehaviour:
     AddAnchorColor: {r: 0, g: 0.31238317, b: 1, a: 1}
   anchors:
   - position: {x: 470.37744, y: 137.6394, z: 725.12085}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
+    rotation: {x: 0, y: -0.9186467, z: 0, w: 0.39508}
     nextTangent: {x: -3.8166504, y: 0.588974, z: -4.2105713}
     previousTangent: {x: 3.8166504, y: -0.588974, z: 4.2105713}
     curveTypePosition: 1
@@ -1165,7 +1165,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    curveTypeRotation: 0
+    curveTypeRotation: 1
     rotationCurve:
       serializedVersion: 2
       m_Curve:
@@ -1195,7 +1195,7 @@ MonoBehaviour:
     - 16.275578
     chained: 1
   - position: {x: 468.67, y: 137.59, z: 709.23}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
+    rotation: {x: 0, y: 0.9918717, z: 0, w: 0.12724188}
     nextTangent: {x: 0.45599365, y: -0.4165802, z: -1.0928345}
     previousTangent: {x: -0.45599365, y: 0.4165802, z: 1.0928345}
     curveTypePosition: 1
@@ -1223,7 +1223,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    curveTypeRotation: 0
+    curveTypeRotation: 1
     rotationCurve:
       serializedVersion: 2
       m_Curve:
@@ -1249,13 +1249,75 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     LUT:
-    - 4.068572
-    - 9.457037
+    - 0.06498442
+    - 0.14229548
+    - 0.23168868
+    - 0.33294097
+    - 0.44578183
+    - 0.5697901
+    - 0.7045497
+    - 0.849877
+    - 1.005153
+    - 1.170211
+    - 1.3445314
+    - 1.527736
+    - 1.719479
+    - 1.9193063
+    - 2.1268322
+    - 2.3417366
+    - 2.5634944
+    - 2.7917986
+    - 3.026206
+    - 3.2662585
+    - 3.5117025
+    - 3.7620263
+    - 4.0168934
+    - 4.275807
+    - 4.5384073
+    - 4.8043966
+    - 5.073226
+    - 5.34456
+    - 5.6180787
+    - 5.8932357
+    - 6.1697493
+    - 6.4471283
+    - 6.7250915
+    - 7.0031815
+    - 7.2809305
+    - 7.558076
+    - 7.8340816
+    - 8.108722
+    - 8.381497
+    - 8.652101
+    - 8.920023
+    - 9.185042
+    - 9.446657
+    - 9.704535
+    - 9.958281
+    - 10.207586
+    - 10.45205
+    - 10.691362
+    - 10.925078
+    - 11.1528845
+    - 11.374565
+    - 11.589656
+    - 11.797947
+    - 11.999093
+    - 12.192814
+    - 12.378959
+    - 12.557203
+    - 12.727527
+    - 12.889677
+    - 13.04363
+    - 13.189459
+    - 13.327282
+    - 13.457293
+    - 13.580053
     chained: 1
-  - position: {x: 477.4256, y: 137.59, z: 712.72174}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
-    nextTangent: {x: 1.7521667, y: -0.023620605, z: 0.4234619}
-    previousTangent: {x: -1.7521667, y: 0.023620605, z: -0.4234619}
+  - position: {x: 476.2034, y: 137.59, z: 698.15424}
+    rotation: {x: 0, y: 0.80604374, z: 0, w: 0.591856}
+    nextTangent: {x: 2.4320679, y: 0.18270874, z: -0.72857666}
+    previousTangent: {x: -2.4320679, y: -0.18270874, z: 0.72857666}
     curveTypePosition: 1
     positionCurve:
       serializedVersion: 2
@@ -1281,7 +1343,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    curveTypeRotation: 0
+    curveTypeRotation: 1
     rotationCurve:
       serializedVersion: 2
       m_Curve:
@@ -1307,13 +1369,75 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     LUT:
-    - 2.756346
-    - 5.348103
+    - 0.119486146
+    - 0.2392943
+    - 0.35951138
+    - 0.47995335
+    - 0.6007477
+    - 0.721784
+    - 0.8431008
+    - 0.9646154
+    - 1.0863324
+    - 1.2082615
+    - 1.3304003
+    - 1.4526657
+    - 1.5750661
+    - 1.6975708
+    - 1.8201665
+    - 1.9428562
+    - 2.0655978
+    - 2.188378
+    - 2.311141
+    - 2.4339495
+    - 2.5567477
+    - 2.6794813
+    - 2.8021414
+    - 2.924762
+    - 3.047261
+    - 3.1697083
+    - 3.292025
+    - 3.4142137
+    - 3.5362606
+    - 3.658204
+    - 3.7799916
+    - 3.9015858
+    - 4.02304
+    - 4.144307
+    - 4.2654247
+    - 4.386347
+    - 4.507131
+    - 4.627747
+    - 4.748196
+    - 4.8684754
+    - 4.988662
+    - 5.1086874
+    - 5.2286067
+    - 5.3484163
+    - 5.4681773
+    - 5.587863
+    - 5.7075353
+    - 5.8272395
+    - 5.9469085
+    - 6.0667043
+    - 6.1865835
+    - 6.306618
+    - 6.4267955
+    - 6.5472236
+    - 6.667944
+    - 6.7890387
+    - 6.9104853
+    - 7.0323563
+    - 7.1547847
+    - 7.2777395
+    - 7.401381
+    - 7.525685
+    - 7.650829
+    - 7.776827
     chained: 1
-  - position: {x: 482.54257, y: 137.59, z: 711.3821}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
-    nextTangent: {x: 1.8037415, y: 0.037017822, z: 1.49646}
-    previousTangent: {x: -1.8037415, y: -0.037017822, z: -1.49646}
+  - position: {x: 483.78088, y: 137.59, z: 697.545}
+    rotation: {x: 0, y: 0.15678346, z: 0, w: 0.987633}
+    nextTangent: {x: 2.4751587, y: 0.20378113, z: 1.0527954}
+    previousTangent: {x: -2.4751587, y: -0.20378113, z: -1.0527954}
     curveTypePosition: 1
     positionCurve:
       serializedVersion: 2
@@ -1339,7 +1463,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    curveTypeRotation: 0
+    curveTypeRotation: 1
     rotationCurve:
       serializedVersion: 2
       m_Curve:
@@ -1365,13 +1489,75 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     LUT:
-    - 4.6673274
-    - 8.830017
+    - 0.12623881
+    - 0.25669378
+    - 0.3965785
+    - 0.54965746
+    - 0.71845126
+    - 0.90452325
+    - 1.1086863
+    - 1.3311977
+    - 1.5723245
+    - 1.831719
+    - 2.1090086
+    - 2.4038298
+    - 2.715553
+    - 3.043665
+    - 3.3874311
+    - 3.7461994
+    - 4.119291
+    - 4.5058928
+    - 4.9053335
+    - 5.316825
+    - 5.7395687
+    - 6.1728
+    - 6.615656
+    - 7.0674644
+    - 7.5272913
+    - 7.9944196
+    - 8.467942
+    - 8.947193
+    - 9.431212
+    - 9.919152
+    - 10.410317
+    - 10.9038315
+    - 11.398811
+    - 11.894467
+    - 12.390011
+    - 12.884583
+    - 13.377254
+    - 13.867363
+    - 14.35398
+    - 14.836246
+    - 15.313427
+    - 15.784599
+    - 16.24892
+    - 16.70569
+    - 17.153955
+    - 17.5929
+    - 18.021809
+    - 18.439693
+    - 18.845846
+    - 19.239408
+    - 19.619614
+    - 19.985495
+    - 20.336512
+    - 20.671694
+    - 20.990213
+    - 21.291403
+    - 21.57454
+    - 21.83882
+    - 22.0836
+    - 22.308329
+    - 22.512316
+    - 22.695034
+    - 22.856583
+    - 22.996777
     chained: 1
   - position: {x: 480.19177, y: 137.59, z: 719.88995}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
-    nextTangent: {x: 1.7501831, y: -0.17799377, z: 0.78326416}
-    previousTangent: {x: -1.7501831, y: 0.17799377, z: -0.78326416}
+    rotation: {x: 0, y: 0.04126853, z: 0, w: 0.9991481}
+    nextTangent: {x: 0.4584961, y: -0.51652527, z: 2.6809082}
+    previousTangent: {x: -0.4584961, y: 0.51652527, z: -2.6809082}
     curveTypePosition: 1
     positionCurve:
       serializedVersion: 2
@@ -1397,7 +1583,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    curveTypeRotation: 0
+    curveTypeRotation: 1
     rotationCurve:
       serializedVersion: 2
       m_Curve:
@@ -1423,11 +1609,73 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     LUT:
-    - 3.7200785
-    - 7.29659
+    - 0.13199954
+    - 0.26847202
+    - 0.409276
+    - 0.5542747
+    - 0.70343524
+    - 0.85635513
+    - 1.0129513
+    - 1.1730514
+    - 1.3364424
+    - 1.5030153
+    - 1.6724826
+    - 1.8446128
+    - 2.0194128
+    - 2.1965315
+    - 2.3758068
+    - 2.557102
+    - 2.7400765
+    - 2.9246786
+    - 3.1105902
+    - 3.2977207
+    - 3.485877
+    - 3.6747017
+    - 3.864193
+    - 4.054067
+    - 4.2440705
+    - 4.4340887
+    - 4.6238246
+    - 4.8131638
+    - 5.0019107
+    - 5.18985
+    - 5.376727
+    - 5.562371
+    - 5.7466607
+    - 5.9293003
+    - 6.110102
+    - 6.2889147
+    - 6.465487
+    - 6.639708
+    - 6.811336
+    - 6.9800897
+    - 7.1459126
+    - 7.308586
+    - 7.4678054
+    - 7.6235485
+    - 7.775562
+    - 7.92366
+    - 8.067674
+    - 8.207381
+    - 8.342755
+    - 8.473446
+    - 8.5994005
+    - 8.720548
+    - 8.836607
+    - 8.947508
+    - 9.053201
+    - 9.153571
+    - 9.248632
+    - 9.338277
+    - 9.422581
+    - 9.501632
+    - 9.575598
+    - 9.644785
+    - 9.709639
+    - 9.770717
     chained: 1
-  - position: {x: 485.78284, y: 137.59, z: 715.2275}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
+  - position: {x: 483.23804, y: 137.59, z: 729.00793}
+    rotation: {x: 0, y: 0.8473158, z: 0, w: 0.5310894}
     nextTangent: {x: 1.1972656, y: -0.00982666, z: 0.41986084}
     previousTangent: {x: -1.1972656, y: 0.00982666, z: -0.41986084}
     curveTypePosition: 1
@@ -1455,7 +1703,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    curveTypeRotation: 0
+    curveTypeRotation: 1
     rotationCurve:
       serializedVersion: 2
       m_Curve:
@@ -1481,13 +1729,75 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     LUT:
-    - 1.7406793
-    - 4.236229
+    - 0.061168406
+    - 0.13022998
+    - 0.21101561
+    - 0.3056754
+    - 0.4151128
+    - 0.5397225
+    - 0.6794807
+    - 0.8340851
+    - 1.0033388
+    - 1.1867095
+    - 1.3837416
+    - 1.593888
+    - 1.8166329
+    - 2.051454
+    - 2.297645
+    - 2.5546744
+    - 2.8219986
+    - 3.098938
+    - 3.3849044
+    - 3.6792402
+    - 3.981416
+    - 4.290685
+    - 4.6066003
+    - 4.928305
+    - 5.255367
+    - 5.586961
+    - 5.922685
+    - 6.2617474
+    - 6.603557
+    - 6.9475055
+    - 7.2928653
+    - 7.639063
+    - 7.9855566
+    - 8.331565
+    - 8.67653
+    - 9.01981
+    - 9.360669
+    - 9.698569
+    - 10.032916
+    - 10.36291
+    - 10.688113
+    - 11.007741
+    - 11.321183
+    - 11.627813
+    - 11.9270735
+    - 12.218159
+    - 12.500586
+    - 12.773641
+    - 13.036699
+    - 13.289085
+    - 13.530344
+    - 13.759628
+    - 13.976427
+    - 14.180069
+    - 14.369905
+    - 14.545362
+    - 14.705905
+    - 14.850744
+    - 14.979439
+    - 15.091437
+    - 15.186201
+    - 15.2632885
+    - 15.322717
+    - 15.36498
     chained: 1
-  - position: {x: 487.7534, y: 137.59, z: 718.75305}
-    rotation: {x: 0, y: 0, z: 0, w: 1}
-    nextTangent: {x: 0.67388916, y: 1.1676788, z: 1.9217529}
-    previousTangent: {x: -0.67388916, y: -1.1676788, z: -1.9217529}
+  - position: {x: 491.77713, y: 137.59, z: 716.42096}
+    rotation: {x: 0, y: 0.99507576, z: 0, w: 0.0991173}
+    nextTangent: {x: 0.33743286, y: -0.47491455, z: -0.4505005}
+    previousTangent: {x: -0.33743286, y: 0.47491455, z: 0.4505005}
     curveTypePosition: 1
     positionCurve:
       serializedVersion: 2
@@ -1513,7 +1823,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    curveTypeRotation: 0
+    curveTypeRotation: 1
     rotationCurve:
       serializedVersion: 2
       m_Curve:
@@ -1539,13 +1849,75 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     LUT:
-    - 8.89853
-    - 19.30985
+    - 0.024578158
+    - 0.05702763
+    - 0.116302796
+    - 0.20444238
+    - 0.3213538
+    - 0.4661882
+    - 0.6382514
+    - 0.8364724
+    - 1.0599563
+    - 1.3077128
+    - 1.5786339
+    - 1.871898
+    - 2.18639
+    - 2.5211194
+    - 2.8751214
+    - 3.247277
+    - 3.6367464
+    - 4.042378
+    - 4.463232
+    - 4.898268
+    - 5.3465214
+    - 5.806973
+    - 6.278569
+    - 6.7603884
+    - 7.2514124
+    - 7.7506256
+    - 8.257003
+    - 8.769622
+    - 9.287464
+    - 9.809542
+    - 10.334909
+    - 10.86251
+    - 11.391456
+    - 11.92073
+    - 12.449374
+    - 12.976522
+    - 13.501096
+    - 14.022298
+    - 14.5391
+    - 15.0505905
+    - 15.5559845
+    - 16.054268
+    - 16.544687
+    - 17.026325
+    - 17.498394
+    - 17.960121
+    - 18.41075
+    - 18.849607
+    - 19.276
+    - 19.68936
+    - 20.089155
+    - 20.475
+    - 20.846588
+    - 21.203735
+    - 21.546417
+    - 21.87489
+    - 22.189703
+    - 22.491522
+    - 22.781607
+    - 23.061552
+    - 23.333504
+    - 23.600065
+    - 23.86441
+    - 24.130098
     chained: 1
   afterLoop: 0
   alwaysShow: 1
-  playOnAwake: 0
-  sampleAmount: 64
+  playOnAwake: 1
+  sampleAmount: 152
   useSpeed: 1
   speed: 5
   currentDistance: 0
@@ -2075,7 +2447,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1594777884}
-  - component: {fileID: 1594777883}
+  - component: {fileID: 1594777886}
+  - component: {fileID: 1594777885}
   m_Layer: 0
   m_Name: mech capsule
   m_TagString: Untagged
@@ -2083,22 +2456,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!54 &1594777883
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1594777882}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
 --- !u!4 &1594777884
 Transform:
   m_ObjectHideFlags: 0
@@ -2106,7 +2463,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1594777882}
-  m_LocalRotation: {x: -0, y: -0.98107797, z: -0, w: 0.19361301}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 468.23, y: 135.51, z: 705.24}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2115,7 +2472,42 @@ Transform:
   - {fileID: 891354118}
   m_Father: {fileID: 0}
   m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: -157.673, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1594777885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594777882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc41efd098ce01248b6f28a6b0b24df2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  path: {fileID: 1043002783}
+--- !u!195 &1594777886
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594777882}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1001 &1603358024
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2125,8 +2517,13 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5146028904689078817, guid: a598c4b5b61fc1645a6954124c074938,
         type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 5146028904689078817, guid: a598c4b5b61fc1645a6954124c074938,
+        type: 3}
       propertyPath: m_IsKinematic
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7072640378885632285, guid: a598c4b5b61fc1645a6954124c074938,
         type: 3}
@@ -2136,17 +2533,17 @@ PrefabInstance:
     - target: {fileID: 7072640378885632285, guid: a598c4b5b61fc1645a6954124c074938,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 468.92538
+      value: 458.4
       objectReference: {fileID: 0}
     - target: {fileID: 7072640378885632285, guid: a598c4b5b61fc1645a6954124c074938,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 135.68889
+      value: 137.32
       objectReference: {fileID: 0}
     - target: {fileID: 7072640378885632285, guid: a598c4b5b61fc1645a6954124c074938,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 714.1173
+      value: 708.84
       objectReference: {fileID: 0}
     - target: {fileID: 7072640378885632285, guid: a598c4b5b61fc1645a6954124c074938,
         type: 3}
@@ -2563,7 +2960,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 0368bc963cbdfc64c8c781b755348092,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0368bc963cbdfc64c8c781b755348092,
         type: 3}
@@ -2573,7 +2970,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 0368bc963cbdfc64c8c781b755348092,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0368bc963cbdfc64c8c781b755348092,
         type: 3}
@@ -2588,7 +2985,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 0368bc963cbdfc64c8c781b755348092,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0368bc963cbdfc64c8c781b755348092,
         type: 3}
