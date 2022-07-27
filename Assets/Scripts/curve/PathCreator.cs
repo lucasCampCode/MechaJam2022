@@ -78,7 +78,6 @@ public class PathCreator : MonoBehaviour
     private float _timePerSegment;
 
 
-    // Start is called before the first frame update
     void Start()
     {
         foreach (var index in anchors)
@@ -169,7 +168,7 @@ public class PathCreator : MonoBehaviour
     public Vector3 GetBezierPosition(int pointIndex, float time)
     {
         float t = anchors[pointIndex].positionCurve.Evaluate(time);
-        int nextIndex = pointIndex == anchors.Count - 1 ? 0 : pointIndex + 1;
+        int nextIndex = GetNextIndex(pointIndex);
         return
             Vector3.Lerp(
                 Vector3.Lerp(
@@ -235,14 +234,16 @@ public class PathCreator : MonoBehaviour
                         var index = anchors[i];
                         var indexNext = anchors[i + 1];
                         UnityEditor.Handles.DrawBezier(index.position, indexNext.position, index.position + index.nextTangent,
-                            indexNext.position + indexNext.previousTangent, ((UnityEditor.Selection.activeGameObject == gameObject) ? visual.pathColor : visual.inactivePathColor), null, 5);
+                            indexNext.position + indexNext.previousTangent, ((UnityEditor.Selection.activeGameObject == gameObject) ? 
+                            visual.pathColor : visual.inactivePathColor), null, 5);
                     }
                     else if (looped)
                     {
                         var index = anchors[i];
                         var indexNext = anchors[0];
                         UnityEditor.Handles.DrawBezier(index.position, indexNext.position, index.position + index.nextTangent,
-                            indexNext.position + indexNext.previousTangent, ((UnityEditor.Selection.activeGameObject == gameObject) ? visual.pathColor : visual.inactivePathColor), null, 5);
+                            indexNext.position + indexNext.previousTangent, ((UnityEditor.Selection.activeGameObject == gameObject) ?
+                            visual.pathColor : visual.inactivePathColor), null, 5);
                     }
                 }
             }
